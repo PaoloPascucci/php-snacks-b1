@@ -5,15 +5,6 @@ Passare come parametri GET name, mail e age e verificare (cercando i metodi che 
 $name=$_GET['name'];
 $email=$_GET['email']:
 $age=$_GET['age'];
-
-    if (strlen($name) >= 3){
-        if( str_contains($email, '@') && str_contains($email, '.')) {
-            if(is_numeric($age)){
-            $result = 'Accesso riuscito';
-        }}}
-    else{
-        $result = 'Accesso Negato';
-    }; 
 ?>
 
 <!DOCTYPE html>
@@ -25,7 +16,7 @@ $age=$_GET['age'];
     <title>Snack-2</title>
 </head>
 <body>
-    <form action="" method="get">
+    <form action="./index.php" method="get">
         <label for="name">Nome</label>
         <input type="text" name="name" id="name">
         <label for="email">Email</label>
@@ -33,12 +24,19 @@ $age=$_GET['age'];
         <label for="age">Età</label>
         <input type="number" name="age" id="age">
     </form>
-<p>
-
 <?php
-
-    echo $result;
+        if (strlen($name) >= 3){
+        if( str_contains($email, '@') && str_contains($email, '.')) {
+            if(is_int($age)){?>
+            <p>
+            'Accesso riuscito'
+            </p>
+        <?php}}}
+    else{?>
+        <p>
+         'Accesso Negato'
+        </p>
+    <?php}; 
     ?>
-</p>
 </body>
 </html>

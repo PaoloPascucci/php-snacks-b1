@@ -21,7 +21,13 @@ $result = array_unique($numbers);
 </head>
 <body>
     <div>
-    <?php print_r($result); ?>
+    <?php 
+    for ($i=0; $i <count($result); $i++) { ?>
+    <p>
+        <?php echo $result[$i];?>
+    </p>
+
+    <?php };?>
     </div>
 </body>
 </html>
