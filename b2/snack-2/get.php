@@ -13,7 +13,7 @@ $Invitati=[
     'name' => 'Valerio',
     'name' => 'Peter',
 ];
-$name=$_Get['name'];
+$name=$_GET['name'];
 if (in_array($name, $Invitati)) {
     $risposta = "<h1>ok</h1>";
 }else{
