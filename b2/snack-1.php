@@ -45,9 +45,9 @@ $ads = [
 
 <?php foreach ($ads as $key => $value) {
     if ($value['is_active'] === true) {?>
-        <img src="<?php $value['image_path'];
-    }};?>"
-alt="" style="width:200px">
+    <div>
+        <img src="<?= $value['image_path'];}};?>" alt="" style="width:200px">
+    </div>
 
 </body>
 </html>
