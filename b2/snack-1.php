@@ -31,6 +31,8 @@ $ads = [
     ],
 
 ]; 
+$values = [];
+$number = rand(0,2);
 ?>
 
 <!DOCTYPE html>
@@ -39,13 +41,16 @@ $ads = [
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
+    <title>snack-1</title>
 </head>
 <body>
-<?php foreach ($ads as $key => $value) {
-    if ($value['is_active'] === true) {?>
-    <div>
-        <img src="<?= $value['image_path'];}};?>" alt="" style="width:200px">
-    </div>
+<?php 
+foreach ($ads as $key => $value) {
+if ($value['is_active'] == true) {
+    array_push($values, $value);
+    }
+}
+    ?>
+        <a href="<?= $values[$number]['link']; ?>"><img src="<?= $values[$number]['image_path'];?>" alt="ads" style="width:200px"></a>
 </body>
 </html>
