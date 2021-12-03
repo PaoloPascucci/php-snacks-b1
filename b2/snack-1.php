@@ -42,12 +42,10 @@ $ads = [
     <title></title>
 </head>
 <body>
-
 <?php foreach ($ads as $key => $value) {
     if ($value['is_active'] === true) {?>
     <div>
         <img src="<?= $value['image_path'];}};?>" alt="" style="width:200px">
     </div>
-
 </body>
 </html>
